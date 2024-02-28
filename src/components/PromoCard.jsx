@@ -26,39 +26,6 @@ const PromoCard = ({list}) => {
             </TouchableOpacity>
           )}
         />
-      {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
-        
-        <View style={styles.card}>
-          <Image
-            style={styles.vector}
-            source={require("../../assets/vector_promo.png")}
-          ></Image>
-          <Image
-            style={styles.promoCard}
-            source={require("../../assets/illustration_promo.png")}
-          ></Image>
-          <Text style={styles.promoSubTitle}>Mulai Rp 10.000 bisa</Text>
-          <Text style={styles.promoTitle}>Sedekah Takjil</Text>
-          <Text style={styles.promoDesc}>
-            Program Syariah Berbagi Kaum Dhuafa
-          </Text>
-        </View>
-        <View style={styles.card}>
-          <Image
-            style={styles.vector}
-            source={require("../../assets/vector_promo.png")}
-          ></Image>
-          <Image
-            style={styles.promoCard}
-            source={require("../../assets/illustration_promo.png")}
-          ></Image>
-          <Text style={styles.promoSubTitle}>Mulai Rp 10.000 bisa</Text>
-          <Text style={styles.promoTitle}>Sedekah Takjil</Text>
-          <Text style={styles.promoDesc}>
-            Program Syariah Berbagi Kaum Dhuafa
-          </Text>
-        </View>
-      </ScrollView> */}
     </View>
   );
 };
@@ -91,39 +58,6 @@ const styles = StyleSheet.create({
     width: 300,
     height: 170,
     marginHorizontal: 5,
-  },
-  promoCard: {
-    position: "absolute",
-    marginTop: 24,
-    alignSelf: "flex-end",
-  },
-  promoSubTitle: {
-    fontSize: 14,
-    fontWeight: "bold",
-    color: "#ffffff",
-    paddingTop: 16,
-    paddingLeft: 16,
-  },
-  promoTitle: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#ffffff",
-    marginTop: 2,
-    paddingLeft: 16,
-  },
-  promoDesc: {
-    fontSize: 12,
-    fontWeight: "400",
-    color: "#ffffff",
-    marginTop: 16,
-    paddingLeft: 16,
-    width: 150,
-  },
-  vector: {
-    marginTop: -5,
-    position: "absolute",
-    width: 300,
-    height: 170,
   },
 });
 

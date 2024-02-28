@@ -30,24 +30,6 @@ const BalanceCard = ({ saldo, list }) => {
           </TouchableOpacity>
         )}
       />
-        {/* <TouchableOpacity>
-          <View style={styles.paymentComponent}>
-            <Image source={require("../../assets/icon_qris.png")} />
-            <Text style={styles.textPayment}>QRIS</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <View style={styles.paymentComponent}>
-            <Image source={require("../../assets/icon_kirim_dana.png")} />
-            <Text style={styles.textPayment}>Kirim Dana</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <View style={styles.paymentComponent}>
-            <Image source={require("../../assets/icon_topup.png")} />
-            <Text style={styles.textPayment}>Top Up</Text>
-          </View>
-        </TouchableOpacity> */}
       </View>
     </View>
   );
