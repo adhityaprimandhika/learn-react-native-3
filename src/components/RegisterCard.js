@@ -95,9 +95,7 @@ const RegisterCard = () => {
           Saya telah menyetujui data pribadi saya dikelola oleh PT Solusi Pasti
           Indonesia dan partner yang bekerja sama dengan PT Solusi Pasti
           Indonesia untuk tujuan yang telah disebutkan di dalam{" "}
-          <Text style={{ color: "#852884", fontWeight: "bold" }}>
-            Kebijakan Privasi Syariah
-          </Text>
+          <Text style={styles.textBold}>Kebijakan Privasi Syariah</Text>
         </Text>
       </View>
 
@@ -113,6 +111,13 @@ const RegisterCard = () => {
           <ActivityIndicator size="large" />
         </View>
       )}
+
+      <View style={styles.horizontal}>
+        <Text style={styles.textSubTitle}>Sudah punya akun Syariah?</Text>
+        <TouchableOpacity>
+          <Text style={styles.textLogin}>Login</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -212,6 +217,25 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     fontWeight: 500,
     fontSize: 18,
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: 40,
+  },
+  textBold: {
+    color: "#852884",
+    fontWeight: "bold",
+  },
+  textLogin: {
+    color: "#852884",
+    fontWeight: "bold",
+    fontSize: 14,
+    paddingHorizontal: 36,
+    paddingTop: 12,
+    flex: 1,
   },
 });
 
