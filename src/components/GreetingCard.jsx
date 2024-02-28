@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 
-const GreetingCard = ({ name }) => {
+const GreetingCard = ({name}) => {
   return (
     <View style={styles.container}>
       <View style={styles.horizontal}>

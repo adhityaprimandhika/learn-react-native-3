@@ -7,13 +7,7 @@ import {
   Image,
 } from "react-native";
 
-const ListPembayaran = () => {
-  const list = [
-    require("../../assets/icon_telco.png"),
-    require("../../assets/icon_pln.png"),
-    require("../../assets/icon_pdam.png"),
-    require("../../assets/icon_school.png"),
-  ];
+const ListPembayaran = ({list}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textTitle}>List Pembayaran</Text>
@@ -24,7 +18,7 @@ const ListPembayaran = () => {
         columnWrapperStyle={{ justifyContent: "space-betweeen" }}
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.paymentItems}>
-            <Image source={item} />
+            <Image source={{uri: item.image, height: 80, width: 80}} />
           </TouchableOpacity>
         )}
       />

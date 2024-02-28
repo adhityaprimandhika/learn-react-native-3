@@ -21,7 +21,6 @@ const RegisterCard = () => {
   const [checked, setChecked] = useState(false);
 
   function MyCheckbox() {
-    const [checked, setChecked] = useState(false);
     return (
       <Pressable
         style={[styles.checkboxBase, checked && styles.checkboxChecked]}

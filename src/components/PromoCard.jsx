@@ -1,4 +1,5 @@
 import {
+  FlatList,
   Image,
   ScrollView,
   StyleSheet,
@@ -7,7 +8,7 @@ import {
   View,
 } from "react-native";
 
-const PromoCard = () => {
+const PromoCard = ({list}) => {
   return (
     <View style={styles.container}>
       <View style={styles.horizontal}>
@@ -16,7 +17,15 @@ const PromoCard = () => {
           <Text style={styles.textSubTitle}>Lihat Semua</Text>
         </TouchableOpacity>
       </View>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+      <FlatList
+          data={list}
+          horizontal={true}
+          renderItem={({ item }) => (
+              <Image style={styles.card} source={{uri: item.image, height: 170, width: 300}} />
+          )}
+        />
+      {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+        
         <View style={styles.card}>
           <Image
             style={styles.vector}
@@ -47,14 +56,14 @@ const PromoCard = () => {
             Program Syariah Berbagi Kaum Dhuafa
           </Text>
         </View>
-      </ScrollView>
+      </ScrollView> */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 32,
+    paddingHorizontal: 32,
   },
   horizontal: {
     flexDirection: "row",

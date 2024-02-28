@@ -1,6 +1,6 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View, FlatList } from "react-native";
 
-const BalanceCard = ({ saldo }) => {
+const BalanceCard = ({ saldo, list }) => {
   const idr_saldo = new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
@@ -16,7 +16,19 @@ const BalanceCard = ({ saldo }) => {
         source={require("../../assets/vector_line.png")}
       />
       <View style={styles.horizontal}>
-        <TouchableOpacity>
+      <FlatList
+        data={list}
+        scrollEnabled={false}
+        numColumns={3}
+        columnWrapperStyle={{ justifyContent: "space-betweeen" }}
+        renderItem={({ item }) => (
+          <View style={styles.paymentComponent}>
+            <Image source={{uri: item.image, height: 36, width: 36}} />
+            <Text style={styles.textPayment}>{item.title}</Text>
+          </View>
+        )}
+      />
+        {/* <TouchableOpacity>
           <View style={styles.paymentComponent}>
             <Image source={require("../../assets/icon_qris.png")} />
             <Text style={styles.textPayment}>QRIS</Text>
@@ -33,7 +45,7 @@ const BalanceCard = ({ saldo }) => {
             <Image source={require("../../assets/icon_topup.png")} />
             <Text style={styles.textPayment}>Top Up</Text>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );
