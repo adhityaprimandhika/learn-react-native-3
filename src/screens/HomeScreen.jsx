@@ -10,35 +10,22 @@ import GreetingCard from "../components/GreetingCard";
 import BalanceCard from "../components/BalanceCard";
 import ListPembayaran from "../components/ListPembayaran";
 import PromoCard from "../components/PromoCard";
+import ScreenBackground from "../components/ScreenBackground";
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <ScrollView>
-      <Image
-        style={styles.homeBackground}
-        source={require("../../assets/background_home.png")}
-      ></Image>
-      {/* <Text>Ini adalah Home Screen</Text>
-      <Button
-        title="Go to Register"
-        onPress={() => navigation.navigate("Register")}
-      /> */}
+    <ScreenBackground>
       <GreetingCard name={"Adhitya Primandhika"} />
       <BalanceCard saldo={2000000} />
       <ListPembayaran />
       <PromoCard />
-    </ScrollView>
+    </ScreenBackground>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-  },
-  homeBackground: {
-    position: "absolute",
-    paddingTop: 10,
-    width: "100%",
   },
 });
 
