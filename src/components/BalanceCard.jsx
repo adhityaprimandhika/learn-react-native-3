@@ -22,10 +22,12 @@ const BalanceCard = ({ saldo, list }) => {
         numColumns={3}
         columnWrapperStyle={{ justifyContent: "space-betweeen" }}
         renderItem={({ item }) => (
-          <View style={styles.paymentComponent}>
-            <Image source={{uri: item.image, height: 36, width: 36}} />
-            <Text style={styles.textPayment}>{item.title}</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.paymentComponent}>
+              <Image source={{uri: item.image, height: 36, width: 36}} />
+              <Text style={styles.textPayment}>{item.title}</Text>
+            </View>
+          </TouchableOpacity>
         )}
       />
         {/* <TouchableOpacity>

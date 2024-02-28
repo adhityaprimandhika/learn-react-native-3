@@ -21,7 +21,9 @@ const PromoCard = ({list}) => {
           data={list}
           horizontal={true}
           renderItem={({ item }) => (
+            <TouchableOpacity>
               <Image style={styles.card} source={{uri: item.image, height: 170, width: 300}} />
+            </TouchableOpacity>
           )}
         />
       {/* <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
@@ -86,12 +88,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#00373E",
     borderRadius: 10,
     alignItems: "center",
-    elevation: 3,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4,
-    alignItems: "flex-start",
     width: 300,
     height: 170,
     marginHorizontal: 5,
